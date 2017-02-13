@@ -28,7 +28,9 @@ build() {
 	cd "$srcdir/cgreen"
         mkdir build
         cd build
-        cmake -DCMAKE_INSTALL_PREFIX:PATH="/usr" ..
+        cmake -DCMAKE_INSTALL_PREFIX:PATH="/usr" \
+              -DCMAKE_INSTALL_LIBDIR="lib"       \
+              ..
         make
 }
 
